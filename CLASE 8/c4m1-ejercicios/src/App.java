@@ -29,7 +29,13 @@ public class App {
                     break;
             }
 
-        }while (!salir);
+            System.out.println("\n Presione ENTER para continuar");
+            input.nextLine();
+            for (int i = 0; i < 50; i++) {
+                System.out.println();
+            }
+
+        } while (!salir);
         System.out.println("Hasta pronto!");
         input.close();
     }
@@ -42,13 +48,20 @@ public class App {
 
         System.out.println("Ingrese el numero real a calcular: ");
         var real = input.nextDouble();
-        
-        if(real == 0 ){
-            System.out.println("El numero es cero");
-        }else if(real < 0){
-            System.out.println("El numero es negativo");
-        }else{
-            System.out.println("El numero es positivo");
-        }
+        input.nextLine(); //limpiar el Buffer
+
+      //   if(real == 0 ){
+      //      System.out.println("El numero es cero");
+      //  }else if(real < 0){
+      //      System.out.println("El numero es negativo");
+      //  }else{
+      //      System.out.println("El numero es positivo");
+      //  }
+
+
+      // codicion ? valor true : valor false 
+      System.out.println( real == 0 ?  "El numero es cero. " : // Operador ternario 
+      real < 0 ? "El numero es negativo. " : "El numero es positivo. " ); // Operador ternario 
+
     }
 }
